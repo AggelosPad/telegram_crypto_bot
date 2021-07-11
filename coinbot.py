@@ -24,7 +24,6 @@ while(1):
     try:
         response = session.get(url, params=parameters)
         data = json.loads(response.text)
-        #mycoin = data('Bitcoin')
         with open("data_file.json", "w") as write_file:
             json.dump(data, write_file)
 
